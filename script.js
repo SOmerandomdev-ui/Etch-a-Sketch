@@ -1,5 +1,5 @@
 let grid = document.querySelector(".Box")
-let num = 0
+
 
 //Makes 1 row of 10 divs then adds more rows 
 for (i = 0; i < 10; i++) {
@@ -12,7 +12,5 @@ for (i = 0; i < 10; i++) {
         tiles.className = "tiles"
         row.appendChild(tiles)
        
-    }   
-    
-    num += 1;
+    }     
 }

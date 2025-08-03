@@ -1,28 +1,28 @@
 .Container {
-    border: 1px red solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    
 }
 
 .Box {
     display: flex;
-    height: 634px;
-    border: 1px black solid;
-    gap: 20px;
+    height: 420px;
+    
     align-items: center;
     justify-content: center;
-    
-    
+    flex-direction: column;
 }
 
 .row {
     display: flex;
-    flex-direction: column;
-    gap:20px;
+    
 }
 
 .tiles {
     display: flex;
-    border: 1px black solid;
-    width: 20px;
-    height: 20px;
-    
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
 }

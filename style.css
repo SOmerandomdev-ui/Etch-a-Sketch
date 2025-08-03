@@ -1,0 +1,28 @@
+.Container {
+    border: 1px red solid;
+}
+
+.Box {
+    display: flex;
+    height: 634px;
+    border: 1px black solid;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.tiles {
+    display: flex;
+    border: 1px black solid;
+    width: 20px;
+    height: 20px;
+    
+}

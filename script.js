@@ -1,3 +1,5 @@
+let isHovered;
+let Down = false;
 let button = document.querySelector(".change-grid")
 let grid = document.querySelector(".Container")
 
@@ -30,16 +32,44 @@ let tiles = document.querySelectorAll(".tiles");
 
 
 
+
 tiles.forEach(tile => {
-    tile.addEventListener("mouseover", () => {
+
+    tile.addEventListener("mousedown", () => {
+        Down = true;
+    });
+
+    tile.addEventListener("mouseup", () => {
+        Down = false;
+    });
+
+    tile.addEventListener("mouseenter", () => {
+        isHovered = true;
+    });
+
+    tile.addEventListener("mouseleave", () => {
+        isHovered = false;
+    });
+    
+    tile.addEventListener("mousedown", () => {
         //rgb generator
         const r = Math.floor(Math.random() * 256); 
         const g = Math.floor(Math.random() * 256); 
         const b = Math.floor(Math.random() * 256); 
         color = `rgb(${r},${g},${b})`;
         tile.style.backgroundColor = color;  
-    });
-})});
+    })
+        
+    tile.addEventListener("mouseenter", () => {
+        if (Down) {
+            const r = Math.floor(Math.random() * 256); 
+            const g = Math.floor(Math.random() * 256); 
+            const b = Math.floor(Math.random() * 256); 
+            const color = `rgb(${r},${g},${b})`;
+            tile.style.backgroundColor = color;
+        }})
+
+})})
 
 
 
